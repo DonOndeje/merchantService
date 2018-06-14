@@ -5,12 +5,12 @@
  */
 package repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import model.Ouote;
 /**
  *
  * @author Don
  */
-public class QueryRepository {
-    public void findByUsername(String username){
-        
-    }
+public interface QueryRepository extends JpaRepository<Ouote,Integer>{
+    public abstract void findByUsername(String username);
 }
