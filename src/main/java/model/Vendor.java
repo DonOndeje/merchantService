@@ -11,21 +11,20 @@ import javax.persistence.Table;
 
 // we create a model to handle database data 
 @Entity
-@Table(name = "merchants", catalog = "masoko")
-public class Ouote implements Serializable {
+@Table(name = "merchants", catalog = "masoko") // table name is merchants database name is masoko 
+public class Vendor implements Serializable {
 
-    public Ouote() {
-        
-    }
+    public Vendor() {}
    
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO) // this value on the table will be an auto generated value
+    @Column(name = "id") // annotated with a column name 'id'
     private int id;
     
     @Column(name = "vendor_name")
     private String vendor_name;
     
+  
     @Column(name = "vendor_telephone")
     private String vendor_telephone;
     
@@ -58,8 +57,9 @@ public class Ouote implements Serializable {
     
     @Column(name = "external_id")
     private String external_id;
-
-    public int getId() {
+    
+    
+     public int getId() {
         return id;
     }
 
@@ -162,8 +162,6 @@ public class Ouote implements Serializable {
     public void setExternal_id(String external_id) {
         this.external_id = external_id;
     }
-    
-    
      
     
    

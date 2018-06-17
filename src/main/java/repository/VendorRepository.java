@@ -5,12 +5,13 @@
  */
 package repository;
 
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
-import model.Ouote;
+import model.Vendor;
 /**
  *
  * @author Don
  */
-public interface QueryRepository extends JpaRepository<Ouote,Integer>{
-    public abstract void findByUsername(String username);
+public interface VendorRepository extends JpaRepository<Vendor,Integer>{ // By extending JpaRepository, VendorRepository inherits 18 methods for performing common persistence operations. 
+    public abstract List<Vendor> findByVendorName(String vendornamename);
 }
