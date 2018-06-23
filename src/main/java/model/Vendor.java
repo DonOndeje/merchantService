@@ -14,14 +14,14 @@ import javax.persistence.Table;
 @Table(name = "merchants", catalog = "masoko") // table name is merchants database name is masoko 
 public class Vendor implements Serializable {
 
-    public Vendor() {}
+    public Vendor() {} // the entity class should have a default no argument constructor
    
-    @Id
+    @Id //signifies the primary key
     @GeneratedValue(strategy = GenerationType.AUTO) // this value on the table will be an auto generated value
     @Column(name = "id") // annotated with a column name 'id'
     private int id;
     
-    @Column(name = "vendor_name")
+    @Column(name = "vendor_name") // provides the name of a column in a table
     private String vendor_name;
     
   
@@ -31,7 +31,7 @@ public class Vendor implements Serializable {
     @Column(name = "vendor_email")
     private String vendor_email;
     
-    @Column(name = "payment_type")
+    @Column(name = "payment_type") // either Pay Bill or Till Number
     private String payment_type;
     
     @Column(name = "payment_number")
